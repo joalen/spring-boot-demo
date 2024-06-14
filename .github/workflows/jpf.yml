@@ -13,14 +13,14 @@ jobs:
       with:
         ref: 87a142f9604c1a5365b4d24d22c2c11c26a9d5ab
   
-    - name: Set up JDK 17 for project
+    - name: Set up JDK 8 for project
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '8'
         cache: maven
 
-    - name: Build project with JDK 17
+    - name: Build project with JDK 8
       run: mvn clean install -DskipTests
 
     - name: Set up JDK 11 for JPF
