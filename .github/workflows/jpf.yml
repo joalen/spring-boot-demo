@@ -20,9 +20,8 @@ jobs:
     - name: Set up JDK 8 for project
       uses: actions/setup-java@v3
       with:
-        distribution: 'temurin'
-        java-version: '8'
-        cache: maven
+        distribution: 'adopt'
+        java-version: '11.0.23+9' 
 
     - name: Build project with JDK 8
       run: mvn clean install -DskipTests
